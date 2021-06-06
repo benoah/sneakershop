@@ -1,0 +1,233 @@
+/*
+Theme Name: Ecommerce store
+Theme URI: 
+Author: ben noah
+Author URI: 
+Description:Semesterprocject 
+Version: 1.1
+*/
+
+/*--------------------------------------------------------------
+# default style 
+--------------------------------------------------------------*/
+:root {
+  --primary-color: #fff;
+  --default-font: Montserrat, karla, sans-serif;
+  --header-color: #474747;
+  --logo-colour: #727272;
+  --menu-color: #696a86;
+  --menu-container: #f9f9f9;
+}
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;400;500;700&family=Montserrat:wght@200;300;400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.navbar {
+  font-family: "Karla", sans-serif !important;
+  background: var(--menu-container) !important;
+
+}
+
+
+
+.logoHeader {
+  color: #696a86;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: all 0.2s ease-in-out;
+}
+
+.logoHeaderSpan {
+  font-size: 0.875rem;
+  font-weight: 200;
+  margin-left: 16px;
+}
+
+.nav-link{
+  text-decoration: none;
+  font-weight: 900;
+  color: var(--menu-color);
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #333;
+  display: block;
+  transition: 0.2s background-color;
+}
+
+.navbar-toggler-icon{
+  height: 2px;
+  background: var(  --logo-colour) !important;
+  display: block;
+  border: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  margin-top: 4px;
+}
+.navbar-toggler-icon span:nth-child(1) {
+  width: 100%;
+  margin-bottom: 0.313rem;
+  
+}
+
+.navbar-toggler-icon span:nth-child(2) {
+  width: 80%;
+  margin-bottom: 0.313rem;
+  margin-top: 0.313rem;
+}
+.navbar-toggler-icon span:nth-child(3) {
+  width: 60%;
+  margin-top: 0.313rem;
+}
+
+
+.CommersialContainer {
+  justify-content: center;
+  display: flex;
+  margin-top: 24px;
+ 
+}
+.CommersialContainer .Text1 {
+  font: 16px ;
+  color: #333;
+}
+.CommersialContainer .Text2 {
+  display: inline-block;
+  font: 1em/1em "karla", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.3em 10px;
+  background: #333;
+  vertical-align: top;
+}
+
+.menu-links li a {
+  color: #696a86;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 32px;
+}
+.message {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid grey;
+  color: grey;
+}
+
+.message.error {
+  border-color: red;
+  color: white;
+  background: red;
+}
+
+.message.warning {
+  border-color: orange;
+  color: white;
+  background: orange;
+}
+
+.message.success {
+  border-color: green;
+  color: white;
+  background: green;
+}
+
+
+
+
+.card-action {
+  color: #e26d5c;
+  background: #fff;
+  border-radius: 100%;
+  padding: 15px;
+  font-size: 15px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-action:hover {
+  color: #fff;
+  background: #e26d5c;
+}
+
+.card-title{
+  font-size: 20px;
+  font-weight: bold;
+  background: #fff;
+}
+
+.card-img-top  {
+  min-height: 400px;
+  border-radius: 8px 8px 0px 0;
+}
+
+
+/* 
+.card-sl {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-image img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 8px 8px 0px 0;
+}
+
+.card-action {
+  position: relative;
+  float: right;
+  margin-top: -25px;
+  margin-right: 20px;
+  z-index: 2;
+  color: #e26d5c;
+  background: #fff;
+  border-radius: 100%;
+  padding: 15px;
+  font-size: 15px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+.card-heading {
+  font-size: 18px;
+  font-weight: bold;
+  background: #fff;
+  padding: 10px 15px;
+}
+
+.card-text {
+  padding: 10px 15px;
+  background: #fff;
+  font-size: 14px;
+  color: #636262;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  width: 100%;
+  background-color: #1f487e;
+  color: #fff;
+  border-radius: 0 0 8px 8px;
+}
+
+.card-button:hover {
+  text-decoration: none;
+  background-color: #1d3461;
+  color: #fff;
+}
+
+
+
+
+
+
+*/
+
