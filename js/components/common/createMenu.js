@@ -1,5 +1,4 @@
 
-
 import { getUsername } from "../../utils/storage.js";
 
 export default function createMenu() {
@@ -9,19 +8,15 @@ export default function createMenu() {
 
     const username = getUsername();
 
-    let authLink = ` <a href="login.html" class="${pathname === "/login.html" ? "active" : ""}">Login</a>`;
+    let authLink = `<a href="login.html" class="${pathname === "/login.html" ? "active" : ""}">Login</a>`;
 
     if (username) {
-        authLink = `
-        <br>
-        <span>Hi ${username}</span>
-        `;
+        authLink = `<a href="add.html" class="${pathname === "/add.html" ? "active" : ""}">Add Product</a>
+                    <span>Hi ${username}</span>`;
     }
 
-    console.log(username);
-
-    container.innerHTML = `<div class="container pt-5">
-                                <button type="button" class="btn btn-outline-secondary ${pathname === "/" ? "active" : ""} ">Home</button>
+    container.innerHTML = `<div class="menu">
+                                <a href="/" class="${pathname === "/" || pathname === "/index.html" ? "active" : ""}">Home</a>
                                 ${authLink}
                         </div>`;
 }

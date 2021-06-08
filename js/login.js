@@ -1,7 +1,9 @@
+import { baseUrl } from "./settings/URL.js";
 import displayMessage from "./components/common/displayMessage.js";
-import { baseUrl } from "./settings/Url.js";
 import { saveToken, saveUser } from "./utils/storage.js";
 
+import createMenu from "./components/common/createMenu.js";
+createMenu();
 const form = document.querySelector("form");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
@@ -10,6 +12,8 @@ const userInput = document.querySelector(".username");
 const passwordInput = document.querySelector(".password");
 const passwordError = document.querySelector("#passwordError");
 const UsernameError = document.querySelector("#UsernameError");
+
+
 
 
 form.addEventListener("submit", submitForm);
@@ -28,6 +32,37 @@ function submitForm(event) {
 
     doLogin(usernameValue, passwordValue);
 }
+
+
+
+function validateForm(event) {
+    event.preventDefault();
+
+    if (checkLength(userInput.value, 0) === true) {
+        UsernameError.style.display = "none";
+    } else {
+        UsernameError.style.display = "block";
+    }
+
+    if (checkLength(passwordInput.value, 3) === true) {
+        passwordError.style.display = "none";
+    } else {
+        passwordError.style.display = "block";
+    }
+    console.log("hello");
+}
+
+form.addEventListener("submit", validateForm);
+
+function checkLength(value, len) {
+    if (value.trim().length > len) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
 
 async function doLogin(username, password) {
     const url = baseUrl + "auth/local";
@@ -50,7 +85,7 @@ async function doLogin(username, password) {
         console.log(json);
 
         if (json.user) {
-            displayMessage("success", "Successfully logged in", ".message-container");
+            //displayMessage("success", "Successfully logged in", ".message-container");
             saveToken(json.jwt);
             saveUser(json.user);
 
@@ -64,3 +99,4 @@ async function doLogin(username, password) {
         console.log(error);
     }
 }
+

@@ -1,20 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Add Product</title>
+        <title>Edit Product</title>
         <link href="css/style.css" rel="stylesheet" />
         <link rel="icon" href="data:;base64,=" />
     </head>
     <body>
         <div class="container">
             <div class="menu-container"></div>
+            <h1>Edit Product</h1>
 
-            <h1>Add Product</h1>
+            <div class="loading">Loading product...</div>
 
-            <form>
+            <form class="edit-form">
                 <div class="message-container"></div>
 
                 <div>
@@ -29,9 +29,16 @@
                     <label for="description">Description</label>
                     <textarea id="description"></textarea>
                 </div>
-                <button>Add</button>
+
+                <input id="id" type="hidden" />
+
+                <div>
+                    <button id="update">Update</button>
+                </div>
+                <div>
+        <div class="delete-container"></div>                </div>
             </form>
         </div>
-        <script src="js/add.js" type="module"></script>
+        <script src="js/edit.js" type="module"></script>
     </body>
 </html>

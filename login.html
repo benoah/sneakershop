@@ -1,71 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <title>Sneaker Shop</title>
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <nav class="navbar sticky-top navbar-expand-lg">
-        <dic class="container navcontainer">
-            <a class="navbar-brand" href="#"><p class="logoHeader navbar-brand">Kicks&amp;86
-            </p></a>
-        </dic>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">
-            </span>
-            <span class="navbar-toggler-icon">
-            </span>
-            <span class="navbar-toggler-icon">
-            </span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Shop</a>
-              </li>   
-              <li class="nav-item">
-                <a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt"></i></a>
-              </li>          
-            </ul>
-          </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <link href="css/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:;base64,=" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="menu-container"></div>
+
+            <h1>Login</h1>
+
+            <form>
+                <div class="message-container"></div>
+
+                <div>
+                    <label for="username"> Username/email</label>
+                    <input id="username" />
+                </div>
+                <div>
+                    <label for="password"> Password</label>
+                    <input id="password" />
+                </div>
+                <button>Submit</button>
+            </form>
         </div>
-    </nav>
-     <h1>Login</h1>
-     <div class="container">
-        <!--container-heahopding-------->
-        <div class="container-heading">
-            <h3>Welcome Admin</h3>
-            <p>We Provide You New Design Shoes</p>
-        </div>
-        <form id="contactForm">
-            <div class="message-container"></div>
-            <div>
-                <label for="username">
-                    Username
-                    <input name="Username/email" class="username" id="username" placeholder="Username" />
-                </label>
-                <div class="form-error" id="UsernameError">Please enter username</div>
-            </div>
-            <hr>
-            <div>
-                <label for="password">
-                    Password
-                    <input name="password" class="password" id="password" placeholder="Password" />
-                </label>
-                <div class="form-error" id="passwordError">invalid password</div>
-            </div>
-            <hr>
-            <button class="submit">Submit</button>
-        </form>
-    </div>
-    <script src="js/login.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-</body>
+        <script src="js/login.js" type="module"></script>
+    </body>
 </html>
