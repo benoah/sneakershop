@@ -4,6 +4,13 @@ import createMenu from "./components/common/createMenu.js";
 import { getToken } from "./utils/storage.js";
 import { baseUrl } from "./settings/URL.js";
 
+
+const token = getToken();
+
+if (!token) {
+    location.href = "/";
+}
+
 createMenu();
 
 const form = document.querySelector("form");
@@ -37,7 +44,6 @@ async function addProduct(name, price, description) {
 
     const data = JSON.stringify({ name: name, price: price, description: description });
 
-    const token = getToken();
 
     const options = {
         method: "POST",

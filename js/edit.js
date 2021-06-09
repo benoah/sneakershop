@@ -3,6 +3,11 @@ import displayMessage from "./components/common/displayMessage.js";
 import createMenu from "./components/common/createMenu.js";
 import { getToken } from "./utils/storage.js";
 import deleteButton from "./components/products/deleteButton.js";
+const token = getToken();
+
+if (!token) {
+    location.href = "/";
+}
 
 createMenu();
 
@@ -68,7 +73,6 @@ async function updateProduct(name, price, description, id) {
     const url = baseUrl + "products/" + id;
     const data = JSON.stringify({ name: name, price: price, description: description });
 
-    const token = getToken();
 
     const options = {
         method: "PUT",

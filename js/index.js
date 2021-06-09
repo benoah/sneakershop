@@ -15,7 +15,8 @@ const productsUrl = baseUrl + "products";
         container.innerHTML = "";
 
         json.forEach(function (product) {
-            container.innerHTML += `<a class="product" href="edit.html?id=${product.id}">
+            container.innerHTML += `
+            <a class="product" href="edit.html?id=${product.id}">
                                         <h4>${product.brand}</h4>
                                         <p>Price: ${product.price}</p>
                                     </a>`;
