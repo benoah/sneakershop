@@ -14,19 +14,18 @@ export default function createMenu() {
 
     if (username) {
         authLink = `
-       
         <a href="add.html" class="nav-link ${pathname === "/add.html" ? "active" : ""}">Add Product</a>
-        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-        <button id="logout" type="button" class="btn  btn-outline-secondary">Logout${username}</button>    
+        <li class="nav-item">
+        <button id="logout" type="button" class="btn btn-black">Logout</button>    
         </li>
         `;
     }
 
     container.innerHTML = `
-    <nav class="start-header start-style navbar navbar-expand-lg navbar-light bg-light navigation-wrap bg-light ">
-    <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container">
     <a class="navbar-brand" href="/" target="_blank"><img class="logoimage" src="logo/logo.jpg" alt=""></a>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav ">
           <li class="nav-item">
           <a href="/" class="nav-link ${pathname === "/" || pathname === "/index.html" ? "active" : ""}">Home</a>
           </li>
@@ -37,7 +36,10 @@ export default function createMenu() {
       
     </div>
   </nav>
-  
+  <div class="container"> 
+  <br>
+  <p class="text-muted">Hey ${username}</p>
+  </div>
   `;
 
   logoutButton();

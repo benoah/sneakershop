@@ -1,8 +1,15 @@
-import { baseUrl } from "./settings/URL.js";
+
+import { baseUrl } from "./settings/api.js";
 import displayMessage from "./components/common/displayMessage.js";
 import createMenu from "./components/common/createMenu.js";
 import { getToken } from "./utils/storage.js";
 import deleteButton from "./components/products/deleteButton.js";
+
+const token = getToken();
+
+if (!token) {
+    location.href = "/";
+}
 
 createMenu();
 
@@ -17,24 +24,34 @@ if (!id) {
 const productUrl = baseUrl + "products/" + id;
 
 const form = document.querySelector("form");
-const name = document.querySelector("#name");
+const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
+const image_url = document.querySelector("#image_url");
+const category = document.querySelector("#category");
+const rating = document.querySelector("#rating");
+const brand = document.querySelector("#brand")
 const idInput = document.querySelector("#id");
 const message = document.querySelector(".message-container");
 const loading = document.querySelector(".loading");
+
 
 (async function () {
     try {
         const response = await fetch(productUrl);
         const details = await response.json();
 
-        name.value = details.name;
+        title.value = details.title;
         price.value = details.price;
         description.value = details.description;
+        image_url.value = details.image_url;
+        category.value = details.category;
+        rating.value = details.rating;
+        brand.value = details.brand;
         idInput.value = details.id;
-       
+
         deleteButton(details.id);
+
 
         console.log(details);
     } catch (error) {
@@ -52,21 +69,35 @@ function submitForm(event) {
 
     message.innerHTML = "";
 
-    const nameValue = name.value.trim();
+    const titleValue = title.value.trim();
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
+    const imageValue = image_url.value.trim();
+    const categoryValue = category.value.trim();
+    const ratingValue = parseFloat(rating.value);
+    const brandValue = brand.value.trim();
+
     const idValue = idInput.value;
 
-    if (nameValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
+    if (priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0 || imageValue.length === 0 || categoryValue.length === 0 || ratingValue.length === 0 || brandValue.length === 0) {
         return displayMessage("warning", "Please supply proper values", ".message-container");
     }
 
-    updateProduct(nameValue, priceValue, descriptionValue, idValue);
+    updateProduct(titleValue, priceValue, descriptionValue, imageValue, categoryValue, ratingValue, brandValue, idValue);
 }
 
-async function updateProduct(name, price, description, id) {
+async function updateProduct(title, price, description, image_url, category, rating, brand, id) {
     const url = baseUrl + "products/" + id;
-    const data = JSON.stringify({ name: name, price: price, description: description });
+    
+    const data = JSON.stringify({
+        title: title,
+        price: price,
+        description: description,
+        image_url: image_url,
+        category: category,
+        rating: rating,
+        brand: brand
+    });
 
     const token = getToken();
 
@@ -95,3 +126,6 @@ async function updateProduct(name, price, description, id) {
         console.log(error);
     }
 }
+
+
+

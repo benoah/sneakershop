@@ -1,3 +1,4 @@
+
 .logoimage{
   width: 160px !important;
 }
@@ -23,6 +24,66 @@
 .btn-black{
   background-color: #000 !important;
   color: #fff !important;
-  margin-top: 16px;
 }
 
+
+
+.product-title {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #696a86;
+}
+
+.product-caption {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.badge {
+  font-size: 16px !important;
+  font-weight: 200;
+  color: #fff;
+  background: #8254ff;
+  padding: 8px 8px;
+  border-radius: 4px;
+  margin-bottom: 16px !important;
+}
+
+
+.product-rating {
+  font-size: 16px;
+}
+
+.product-rating i.grey {
+  color: #acacab;
+}
+
+.card-logo {
+  width: 64px;
+
+}
+
+.card-img-top {
+  width: 100%;
+  object-fit: cover;
+}
+
+h1{
+  color: #696a86;
+  font-weight: 900;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  width: 24px;
+}
+
+.login-form-col{
+  background: greyscale;
+}
