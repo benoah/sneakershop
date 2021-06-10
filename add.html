@@ -12,25 +12,62 @@
     <body>
         <div class="menu-container"></div>
         <div class="container">
-            <h1>Add Product</h1>
-            <form>
-                <div class="message-container"></div>
-
-                <div>
-                    <label for="name">Name</label>
-                    <input id="name" />
-                </div>
-                <div>
-                    <label for="price">Price</label>
-                    <input id="price" />
-                </div>
-                <div>
-                    <label for="description">Description</label>
-                    <textarea id="description"></textarea>
-                </div>
-                <button>Add</button>
-            </form>
+    
         </div>
+        <div class="container container_loginForm">
+            <div class="row">
+                <div class="col sidenav">
+                    <div class="login-main-text">
+                        <h2>Application<br> Add Products </h2>
+                        <h1 class="message-container">
+                        </h1>
+                    </div>
+                </div>
+                <div class="col login-form-col">
+                    <div class="add-form">
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input id="brand" type="text" class="form-control" placeholder="brand-name" />
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input id="model" class="form-control" placeholder="model">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input id="image" class="form-control" placeholder="image_url">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input id="price" class="form-control" placeholder="price">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div>
+                                <textarea class="form-control rounded-0" id="description" placeholder="description"
+                                    rows="3"></textarea>
+                            </div>
+                            <input id="id" type="hidden" />
+                            <br>
+                            <button class="btn btn-black col-12">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
         <script src="js/add.js" type="module"></script>
     </body>
 </html>
