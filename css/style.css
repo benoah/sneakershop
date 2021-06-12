@@ -6,6 +6,9 @@
   margin-top: 32px;
 }
 
+a {
+  text-decoration: none !important;
+}
 
 .sidenav {
   height: 50vh;
@@ -86,4 +89,19 @@ h1{
 
 .login-form-col{
   background: greyscale;
+}
+
+.card:hover {
+  transform: scale(1.07);
+}
+
+.card-img-top {
+  object-fit: fill;
+  max-height: 240px;
+}
+card{
+  box-shadow: 0px 6px 8px -8px rgba(89, 36, 102, 1);
+  -webkit-box-shadow: 0px 5px 20px -17px rgba(0,0,0,0.34);
+  -moz-box-shadow: 0px 5px 20px -17px rgba(0,0,0,0.34);
+  box-shadow: 0px 5px 20px -17px rgba(0,0,0,0.34);
 }

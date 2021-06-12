@@ -16,13 +16,9 @@ export default function createMenu() {
     authLink = `
     <div class="">
     <li class="nav-item">
-    <a href="/" class="nav-link ${
-      pathname === "/" || pathname === "/index.html" ? "active" : ""
-    }">Home</a>
+    <a href="/" class="nav-link${pathname === "/" || pathname === "/index.html" ? "active" : ""}">Home</a>
     </li>
-        <a href="add.html" class="nav-link ${
-          pathname === "/add.html" ? "active" : ""
-        }">Add Product</a>
+        <a href="add.html" class="nav-link ${pathname === "/add.html" ? "active" : ""}">Add Product</a>
         <li class="nav-item">
         <button id="logout" type="button" class="btn btn-black">Logout   <p class="text-muted">Hey ${username}</p></button>    
         </li>
@@ -42,6 +38,7 @@ export default function createMenu() {
     <a class="navbar-brand" href="/" target="_blank"><img class="logoimage" src="logo/logo.jpg" alt=""></a>
         <ul class="navbar-nav">
         <a href="/shop.html" class="nav-link ">Shop</a>
+        <a href="/favourites.html" class="nav-link"><i class="fas fa-shopping-basket"></i></a>
           <li class="nav-item">
           ${authLink}
           </li>
