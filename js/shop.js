@@ -45,7 +45,7 @@ function rennderProducts(productsTorender) {
         productContainer.innerHTML += `
         <div class="productcard col-md-4 col-lg-4 d-flex align-items-stretch pt-4">
         <div class="card">
-            <a class="product-box" href="detail.html?id=${product.id}">  
+            <a class="product-box" href="detail.html?id=${product.id}" >  
         <img class="card-img-top" src="${product.image}" alt="Card image cap">
           <div class="container card-content ">
           <div class="row>
