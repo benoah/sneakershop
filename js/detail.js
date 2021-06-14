@@ -1,4 +1,4 @@
-import { baseUrl } from "./settings/URL.js";
+import { BASE_URL } from "./settings/URL.js";
 import displayMessage from "./components/common/displayMessage.js";
 import createMenu from "./components/common/createMenu.js"
 import { getExistingFavs, saveFavs } from "./utils/getExistingFavs.js";
@@ -15,7 +15,7 @@ if (!id) {
     document.location.href = "./shop.html";
 }
 
-const productUrl = baseUrl + "products/" + id;
+const productUrl = BASE_URL + "products/" + id;
 
 
 const favourites = getExistingFavs();

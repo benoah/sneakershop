@@ -1,4 +1,4 @@
-import { baseUrl } from "./settings/URL.js";
+import { BASE_URL } from "./settings/URL.js";
 import displayMessage from "./components/common/displayMessage.js";
 import { saveToken, saveUser } from "./utils/storage.js";
 
@@ -65,7 +65,7 @@ function checkLength(value, len) {
 
 
 async function doLogin(username, password) {
-    const url = baseUrl + "auth/local";
+    const url = BASE_URL + "auth/local";
 
     const data = JSON.stringify({ identifier: username, password: password });
 

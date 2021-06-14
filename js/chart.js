@@ -43,13 +43,19 @@ charts.forEach((chart) => {
 });
 
 productPrice.innerHTML += `
-<div class="summary ">
+
+   
+       
+     
+
+
+<div class="summary">
 <div>
-    <h5><b>Chart</b></h5>
+    <h5><b>Cart Summary</b></h5>
 </div>
 <hr>
 <div class="row">
-    <p class="col">${name}</p>
+    <h6 class="col">${name}  </h6>
     <div class="col text-right">${productprice}</div>
 </div>
 <hr>

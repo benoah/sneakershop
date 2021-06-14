@@ -1,7 +1,27 @@
 
 .logoimage{
-  width: 160px !important;
+  width: 120px !important;
 }
+.banner {
+  background: url("https://stress95.com/images/15024/hero_small.jpg") center center;
+  height: 50vh;
+  position: relative;
+}
+
+.banner__info {
+    background-color: black;
+    color: white;
+    padding: 72px;
+    width: 320px;
+}
+
+.banner__info h3 {
+  background-color: black;
+  color: red;
+ 
+  width: 320px;
+}
+
 .container_loginForm{
   margin-top: 32px;
 }
@@ -188,12 +208,11 @@ card{
 .commercial {
   justify-content: center;
   padding: 16px;
-  margin: 0 auto;
   display: flex;
 }
 
 .commercial_text1 {
-  font: 16px;
+  font: 12px !important;
   color: #222;
   width: 100%;
 }
@@ -228,3 +247,5 @@ card{
 .detail{
   margin-top: 24px;
 }
+
+

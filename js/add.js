@@ -2,7 +2,7 @@
 import displayMessage from "./components/common/displayMessage.js";
 import createMenu from "./components/common/createMenu.js";
 import { getToken } from "./utils/storage.js";
-import { baseUrl } from "./settings/URL.js";
+import { BASE_URL } from "./settings/URL.js";
 
 
 const token = getToken();
@@ -41,7 +41,7 @@ function submitForm(event) {
 }
 
 async function addProduct(brand, model, price, description) {
-    const url = baseUrl + "products";
+    const url = BASE_URL + "products";
 
     const data = JSON.stringify({ brand: brand, model:model, price: price, description: description });
 

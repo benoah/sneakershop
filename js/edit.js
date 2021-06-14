@@ -1,4 +1,4 @@
-import { baseUrl } from "./settings/URL.js";
+import { BASE_URL } from "./settings/URL.js";
 import displayMessage from "./components/common/displayMessage.js";
 import createMenu from "./components/common/createMenu.js";
 import { getToken } from "./utils/storage.js";
@@ -14,7 +14,7 @@ if (!id) {
     document.location.href = "/";
 }
 
-const productUrl = baseUrl + "products/" + id;
+const productUrl = BASE_URL + "products/" + id;
 
 const form = document.querySelector("form");
 const brand = document.querySelector("#brand");
@@ -71,7 +71,7 @@ function submitForm(event) {
 }
 
 async function updateProduct(brand, model, image,  price, description, id) {
-    const url = baseUrl + "products/" + id;
+    const url = BASE_URL + "products/" + id;
     const data = JSON.stringify({ brand: brand, model:model, image:image, price: price, description: description });
 
     const token = getToken();

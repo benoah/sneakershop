@@ -22,20 +22,13 @@ export default function createMenu() {
         <li class="nav-item">
         <button id="logout" type="button" class="btn btn-black">Logout<p class="text-muted">Hey ${username}</p></button>    
         </li>
-    </div>
-
-
-      
-    
-
-
-        `;
+    </div> `;
   }
 
   container.innerHTML = `
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-    <div class="container">
-    <a class="navbar-brand" href="/shop.html" target="_blank"><img class="logoimage" src="logo/logo.jpg" alt=""></a>
+    <div class="container-fluid">
+    <a class="navbar-brand" href="/shop.html" target="_blank"><img class="logoimage" src="logo/logo.jpg" alt="logo"></a>
         <ul class="navbar-nav">
         <a href="/shop.html" class="nav-link ">Shop</a>
         <a href="/chart.html" class="nav-link"><i class="fas fa-shopping-basket"></i></a>

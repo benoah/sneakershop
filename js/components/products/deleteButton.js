@@ -1,4 +1,4 @@
-import { baseUrl } from "../../settings/URL.js";
+import { BASE_URL } from "../../settings/URL.js";
 import { getToken } from "../../utils/storage.js";
 
 
@@ -20,7 +20,7 @@ export default function deleteButton(id) {
         console.log(doDelete);
 
         if (doDelete) {
-            const url = baseUrl + "products/" + id;
+            const url = BASE_URL + "products/" + id;
             const token = getToken();
 
             const options = {
