@@ -1,8 +1,8 @@
-import { baseUrl } from "./settings/URL.js";
+import { BASE_URL } from "./settings/URL.js"
 import displayMessage from "./components/common/displayMessage.js";
 import createMenu from "./components/common/createMenu.js";
 createMenu();
-const productsUrl = baseUrl + "products";
+const productsUrl = BASE_URL + "products";
 
 
 (async function () {
@@ -19,9 +19,6 @@ const productsUrl = baseUrl + "products";
             <div class="col-md-4 col-lg-3 d-flex align-items-stretch pt-4">
             <div class="card ">
             <img class="card-img-top" src="${product.image}" alt="Card image cap">
-             <div class="top-left">
-             <i class="fa fa-heart"></i>
-             </div>
             </img>
             <div class="card-body product-desc">
             <span class="product-title card-title">

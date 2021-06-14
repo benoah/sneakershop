@@ -9,6 +9,10 @@
 a {
   text-decoration: none !important;
 }
+.product-box {
+  color: unset;
+
+}
 
 .sidenav {
   height: 50vh;
@@ -91,7 +95,7 @@ h1{
   background: greyscale;
 }
 
-.card:hover {
+.productcard .card:hover {
   transform: scale(1.07);
 }
 
@@ -100,8 +104,127 @@ h1{
   max-height: 240px;
 }
 card{
-  box-shadow: 0px 6px 8px -8px rgba(89, 36, 102, 1);
-  -webkit-box-shadow: 0px 5px 20px -17px rgba(0,0,0,0.34);
-  -moz-box-shadow: 0px 5px 20px -17px rgba(0,0,0,0.34);
-  box-shadow: 0px 5px 20px -17px rgba(0,0,0,0.34);
+  border: 1px solid #696a86;
+  box-shadow: 0px 1px 1px 0px #696a86;
+  background: #f9f9f9;
+}
+
+
+.search {
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  height: 40px;
+  margin: auto;
+  border: 1px solid #696a86;
+  box-shadow: 0px 1px 1px 0px #696a86;
+  background: #f9f9f9;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  padding: 16px;
+  text-align: center;
+}
+
+.container-heading {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 24px;
+}
+.container-heading h3 {
+  font-size: 32px;
+  letter-spacing: -0.15rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 20px;
+  color: #333;
+  letter-spacing: 8px;
+}
+.container-heading p {
+  color: #696a86;
+  font-size: 16px;
+  text-align: center;
+  font-family: "karla", sans-serif;
+}
+
+
+
+ .card h2 {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+.detail-container{
+  margin-top: 32px;
+}
+.detail-container h2 {
+  font-size: 2rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 4px;
+  
+}
+.style{
+  letter-spacing: 4px;
+  
+}
+
+.detail-container p {
+  margin-top: 8px;
+  
+}
+
+  p {
+  font-size: .8rem;
+  font-weight: 400;
+  color: rgba(32, 41, 28, .8);
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.commercial {
+  justify-content: center;
+  padding: 16px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.commercial_text1 {
+  font: 16px;
+  color: #222;
+  width: 100%;
+}
+.commercial_text2 {
+  display: inline-block;
+  font: 1em/1em "karla", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.3em 10px;
+  background: #333;
+  vertical-align: top;
+}
+.tex-uppercase  {
+  padding: 1rem;
+}
+.fa-heart {
+   font-size: 2rem;
+    font-weight: bold;
+}
+
+#reviews {
+  margin-left: 8px;
+}
+.checked {
+  color: rgb(255, 217, 0);
+}
+
+.cart .card{
+  margin-bottom: 16px;
+}
+
+.detail{
+  margin-top: 24px;
 }
